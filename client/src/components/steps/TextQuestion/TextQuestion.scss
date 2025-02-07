@@ -1,0 +1,10 @@
+.text-question {
+  display: flex;
+  flex-direction: column;
+
+  &__label,
+  &__input {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
