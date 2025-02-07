@@ -1,6 +1,6 @@
 export interface Step {
   id: string;
-  type: "info" | "text" | "radio" | "multiselect";
+  type: "info" | "text" | "select" | "multiselect";
   content?: string;
   question?: string;
   options?: string[];
