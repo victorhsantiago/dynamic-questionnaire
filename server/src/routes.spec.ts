@@ -1,20 +1,38 @@
-import { describe, it, expect } from "vitest";
+import request from "supertest";
+import express from "express";
+import { describe, it, expect, beforeAll } from "vitest";
 import { questionnaireSchema } from "./questionnaire.schema";
+import router from "./routes";
 
-describe("Server Index", () => {
-  it("should respond with a 200 status", async () => {
-    const response = await fetch("http://localhost:3001");
-    const data = await response.text();
+describe("Router tests", () => {
+  let app: express.Express;
 
-    expect(response.status).toBe(200);
-    expect(data).toBe("Express + TypeScript Server");
+  beforeAll(() => {
+    app = express();
+    app.use(express.json());
+    app.use(router);
   });
 
-  it("should return JSON data", async () => {
-    const response = await fetch("http://localhost:3001/api/questionnaire");
-    const data = await response.json();
+  it("GET / should return a greeting", async () => {
+    const response = await request(app).get("/");
 
     expect(response.status).toBe(200);
-    expect(data).toEqual(questionnaireSchema);
+    expect(response.text).toBe("Express + TypeScript Server");
+  });
+
+  it("GET /api/questionnaire should return the questionnaire schema", async () => {
+    const response = await request(app).get("/api/questionnaire");
+
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual(questionnaireSchema);
+  });
+
+  it("POST /api/response should update and return a response message", async () => {
+    const testData = { name: "John Doe", favoriteColor: "Blue" };
+
+    const response = await request(app).post("/api/response").send(testData);
+
+    expect(response.status).toBe(200);
+    expect(response.body).toEqual({ message: "Response recorded" });
   });
 });
