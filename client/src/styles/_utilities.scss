@@ -1,0 +1,65 @@
+$color-primary: #00abb8;
+$color-bg: #e1ca96;
+$color-text: #2d2529;
+
+$color-secondary: #5b4e52;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+$color-border: #c3b08c;
+$color-surface: #f2e6d3;
+
+// --------------------------------------------------
+// Dark Theme Variables
+// --------------------------------------------------
+$color-bg-dark: #2d2529;
+$color-text-dark: #e1ca96;
+$color-border-dark: #5b4e52;
+$color-surface-dark: #3f353a;
+
+$color-primary-dark: $color-primary;
+
+// --------------------------------------------------
+// Spacing Scale
+// --------------------------------------------------
+$spacer-0: 0; // 0px
+$spacer-1: 0.25rem; // 4px
+$spacer-2: 0.5rem; // 8px
+$spacer-3: 0.75rem; // 12px
+$spacer-4: 1rem; // 16px
+$spacer-5: 1.25rem; // 20px
+$spacer-6: 1.5rem; // 24px
+$spacer-7: 2rem; // 32px
+$spacer-8: 2.5rem; // 40px
+$spacer-9: 3rem; // 48px
+$spacer-10: 4rem; // 64px
+
+// --------------------------------------------------
+// Typography
+// --------------------------------------------------
+$font-family-base: "Domine", serif;
+
+$font-size-xs: 0.75rem; // ~12px
+$font-size-sm: 0.875rem; // ~14px
+$font-size-md: 1rem; // ~16px
+$font-size-base: $font-size-md;
+$font-size-lg: 1.125rem; // ~18px
+$font-size-xl: 1.25rem; // ~20px
+$font-size-2xl: 1.5rem; // ~24px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-tight: 1.25;
+$line-height-loose: 1.75;
+
+// --------------------------------------------------
+// Transitions
+// --------------------------------------------------
+$transition-fast: all 0.15s ease-in-out;
+$transition-base: all 0.3s ease-in-out;

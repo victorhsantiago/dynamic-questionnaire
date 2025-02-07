@@ -2,9 +2,9 @@
   width: 100%;
   padding: 0.5rem;
   border: 0;
-  border-bottom: 2px solid #00abb8;
+  border-bottom: 2px solid $color-primary;
   background-color: transparent;
-  transition: all 0.2s ease;
+  transition: $transition-fast;
 
   &--small {
     width: 200px;
@@ -16,6 +16,6 @@
 
   &:focus {
     outline: none;
-    background-color: rgba($color: #00abb8, $alpha: 0.1);
+    background-color: rgba($color: $color-primary, $alpha: 0.1);
   }
 }

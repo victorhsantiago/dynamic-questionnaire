@@ -2,22 +2,22 @@
   appearance: none;
 
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: $font-size-base;
+  height: $font-size-base;
 
-  border: 2px solid #999;
-  transition: 0.2s all linear;
+  border: 2px solid $color-border;
+  transition: $transition-fast;
 
   &:checked {
-    border: 5px solid #00abb8;
+    border: 5px solid $color-primary;
   }
 
   &:hover {
-    border-color: #00abb8;
+    border-color: $color-primary;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba($color: #00abb8, $alpha: 0.5);
+    box-shadow: 0 0 0 3px rgba($color: $color-primary, $alpha: 0.5);
   }
 }
