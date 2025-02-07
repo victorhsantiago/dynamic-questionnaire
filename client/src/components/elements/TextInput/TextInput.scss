@@ -1,0 +1,13 @@
+.text-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #00abb8;
+
+  &--small {
+    width: 200px;
+  }
+
+  &--large {
+    width: 400px;
+  }
+}
