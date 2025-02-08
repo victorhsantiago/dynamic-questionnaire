@@ -5,7 +5,7 @@
   width: $font-size-base;
   height: $font-size-base;
 
-  border: 2px solid $color-border;
+  border: 2px solid rgba($color-secondary, 0.5);
   transition: $transition-fast;
 
   &:checked {
@@ -18,6 +18,6 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba($color: $color-primary, $alpha: 0.5);
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.5);
   }
 }

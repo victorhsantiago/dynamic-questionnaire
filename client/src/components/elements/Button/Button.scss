@@ -1,11 +1,10 @@
 .button {
   display: inline-block;
-  padding: $spacer-4 $spacer-7;
+  padding: $spacer-2 $spacer-4;
   background-color: $color-primary;
-  color: $color-surface;
   border: 0px;
   cursor: pointer;
-  font-size: $font-size-xl;
+  font-size: $font-size-lg;
   transition: $transition-fast;
   width: fit-content;
 
