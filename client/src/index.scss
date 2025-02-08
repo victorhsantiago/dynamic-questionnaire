@@ -14,4 +14,25 @@ body {
   font-optical-sizing: auto;
   background-color: $color-bg;
   color: $color-text;
+
+  input {
+    color: inherit;
+
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
+
+  button {
+    color: $color-bg;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-bg-dark;
+    color: $color-text-dark;
+
+    button {
+      color: $color-bg-dark;
+    }
+  }
 }

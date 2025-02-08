@@ -1,13 +1,15 @@
 $color-primary: #00abb8;
-$color-bg: #e1ca96;
-$color-text: #2d2529;
-
 $color-secondary: #5b4e52;
 $color-success: #28a745;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
 $color-info: #17a2b8;
 
+// --------------------------------------------------
+// Light Theme Variables
+// --------------------------------------------------
+$color-bg: #e1ca96;
+$color-text: #2d2529;
 $color-border: #c3b08c;
 $color-surface: #f2e6d3;
 
@@ -18,8 +20,6 @@ $color-bg-dark: #2d2529;
 $color-text-dark: #e1ca96;
 $color-border-dark: #5b4e52;
 $color-surface-dark: #3f353a;
-
-$color-primary-dark: $color-primary;
 
 // --------------------------------------------------
 // Spacing Scale
