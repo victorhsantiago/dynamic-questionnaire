@@ -58,6 +58,12 @@ export const questionnaireSchema: QuestionnaireSchema = {
       type: "multiselect",
       question: "Which programming languages do you know?",
       options: ["JavaScript", "Python", "Java", "C#"],
+      next: "end",
+    },
+    {
+      id: "end",
+      type: "info",
+      content: "Thank you for your answers. Have a nice day!",
       next: null,
     },
   ],
