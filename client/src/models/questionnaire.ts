@@ -18,3 +18,5 @@ export interface QuestionnaireSchema {
   title: string;
   steps: Step[];
 }
+
+export type QuestionnaireResponse = Record<string, string | string[] | null>;
