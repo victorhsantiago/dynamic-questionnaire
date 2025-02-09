@@ -34,6 +34,7 @@ export const TextQuestion: React.FC<TextQuestionProps> = ({
         className="text-question__input"
         variant="large"
         placeholder="Type your answer here"
+        required
       />
       <Button type="submit" className="text-question__button">
         Next

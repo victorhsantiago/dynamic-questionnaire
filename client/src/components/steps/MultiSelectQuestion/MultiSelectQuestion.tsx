@@ -49,7 +49,11 @@ export const MultiSelectQuestion: React.FC<MultiSelectQuestionProps> = ({
             <span className="multi-select-question__text">{option}</span>
           </Label>
         ))}
-      <Button type="submit" className="multi-select-question__button">
+      <Button
+        type="submit"
+        className="multi-select-question__button"
+        disabled={selected.length === 0}
+      >
         Next
       </Button>
     </form>
