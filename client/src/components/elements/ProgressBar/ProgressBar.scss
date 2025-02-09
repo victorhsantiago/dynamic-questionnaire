@@ -1,0 +1,14 @@
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $spacer-1;
+  overflow: hidden;
+
+  &__fill {
+    height: 100%;
+    background-color: $color-secondary;
+    transition: $transition-base;
+  }
+}
