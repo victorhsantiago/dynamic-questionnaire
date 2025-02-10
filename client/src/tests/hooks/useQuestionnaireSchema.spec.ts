@@ -1,8 +1,8 @@
 import { describe, it, expect, vi, Mock } from "vitest";
 import { renderHook, waitFor } from "@testing-library/react";
-import { useQuestionnaireSchema } from "./useQuestionnaireSchema";
 import { getQuestionnaireSchema } from "@services/api";
 import { QuestionnaireSchema } from "@models/questionnaire";
+import { useQuestionnaireSchema } from "@hooks/useQuestionnaireSchema";
 
 vi.mock("@services/api", () => ({
   getQuestionnaireSchema: vi.fn(),

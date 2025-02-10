@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
 import axios from "axios";
-import { getQuestionnaireSchema, postResponse } from "./api";
 import { QuestionnaireSchema } from "@models/questionnaire";
+import { getQuestionnaireSchema, postResponse } from "@services/api";
 
 vi.mock("axios");
 

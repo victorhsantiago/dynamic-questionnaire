@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach, Mock } from "vitest";
 import { renderHook, act } from "@testing-library/react";
-import { useQuestionnaireFlow } from "./useQuestionnaireFlow";
 import { postResponse } from "@services/api";
 import { getNextStepId } from "@services/flow";
 import { QuestionnaireSchema } from "@models/questionnaire";
+import { useQuestionnaireFlow } from "@hooks/useQuestionnaireFlow";
 
 vi.mock("@services/api", () => ({
   postResponse: vi.fn(),
