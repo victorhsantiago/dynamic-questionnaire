@@ -10,6 +10,7 @@ import {
 import { Button, ProgressBar } from "@components/elements";
 import { Step } from "@models/questionnaire";
 import "./App.scss";
+import { ThemeToggle } from "@components/ThemeToggle";
 
 function App() {
   const { questionnaire, loading, error } = useQuestionnaireSchema();
@@ -94,6 +95,7 @@ function App() {
       <main className="questionnaire__main">{renderStep(currentStep)}</main>
 
       <footer className="questionnaire__footer">
+        <ThemeToggle />{" "}
         {path.length > 1 && <Button onClick={goToPreviousStep}>Back</Button>}
       </footer>
     </div>

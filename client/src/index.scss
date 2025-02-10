@@ -15,6 +15,8 @@ body {
   background-color: $color-bg;
   color: $color-text;
 
+  transition: background-color 0.3s, color 0.3s;
+
   input {
     color: inherit;
 
@@ -27,7 +29,7 @@ body {
     color: $color-bg;
   }
 
-  @media (prefers-color-scheme: dark) {
+  &.theme-dark {
     background-color: $color-bg-dark;
     color: $color-text-dark;
 
