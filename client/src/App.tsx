@@ -12,7 +12,7 @@ import { Step } from "@models/questionnaire";
 import "./App.scss";
 import { ThemeToggle } from "@components/ThemeToggle";
 
-function App() {
+const App: React.FC = () => {
   const { questionnaire, loading, error } = useQuestionnaireSchema();
 
   const {
@@ -40,7 +40,7 @@ function App() {
     return <div>No valid current step.</div>;
   }
 
-  function renderStep(step: Step) {
+  const renderStep = (step: Step) => {
     switch (step.type) {
       case "info":
         return (
@@ -81,25 +81,28 @@ function App() {
       default:
         return <div>Unknown step type: {step.type}</div>;
     }
-  }
+  };
 
   const currentIndex =
     questionnaire.steps.findIndex((p) => p.id === currentStep.id) + 1;
   const total = questionnaire.steps.length;
+  const isLastStep = currentIndex === total;
+  const showBackButton = path.length > 1 && !isLastStep;
 
   return (
     <div className="questionnaire">
-      <ProgressBar current={currentIndex} total={total} />
-
       <h1>{questionnaire.title}</h1>
+
       <main className="questionnaire__main">{renderStep(currentStep)}</main>
 
       <footer className="questionnaire__footer">
-        <ThemeToggle />{" "}
-        {path.length > 1 && <Button onClick={goToPreviousStep}>Back</Button>}
+        {showBackButton && <Button onClick={goToPreviousStep}>Back</Button>}
       </footer>
+
+      <ProgressBar current={currentIndex} total={total} />
+      <ThemeToggle />
     </div>
   );
-}
+};
 
 export default App;
